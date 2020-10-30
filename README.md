@@ -1,4 +1,4 @@
-# Covid-19-Face-Mask-Detection
+# Face-Mask-Detection
 COVID-19: Face Mask Detector, developed  a detection Model with 99% accuracy in training & testing. Automatically detect whether a person is wearing a mask or not in real-time video streams.
 
 Table of Content
