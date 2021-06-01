@@ -14,6 +14,9 @@ import os
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to input image")
+ap.add_argument("-v", "--display",
+	action='store_false',
+	help="Show image output; monitor required")
 ap.add_argument("-f", "--face", type=str,
 	default="face_detector",
 	help="path to face detector model directory")
@@ -96,6 +99,9 @@ for i in range(0, detections.shape[2]):
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 		cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
 
-# show the output image
-cv2.imshow("Output", image)
+# show or save the output image
+if args.v:
+	cv2.imshow("Output", image)
+else:
+	cv2.imwrite("det_"+args.image], image)
 cv2.waitKey(0)
