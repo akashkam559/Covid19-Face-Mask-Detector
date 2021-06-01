@@ -100,7 +100,7 @@ for i in range(0, detections.shape[2]):
 		cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
 
 # show or save the output image
-if args['v']:
+if 'v' in args:
 	cv2.imshow("Output", image)
 else:
 	cv2.imwrite("det_"+args['image'], image)
