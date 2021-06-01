@@ -103,5 +103,5 @@ for i in range(0, detections.shape[2]):
 if args.v:
 	cv2.imshow("Output", image)
 else:
-	cv2.imwrite("det_"+args.image], image)
+	cv2.imwrite("det_"+args.image, image)
 cv2.waitKey(0)
