@@ -135,7 +135,11 @@ Next two sections, we will train our face mask detector.
 STEPS FOR TRAINING MODEL
 ------------------------------
 1 - From there, open up a terminal, and execute the following command:
+
+```console
 $ python train_mask_detector.py --dataset dataset
+```
+
 [INFO] loading images...
 [INFO] compiling model...
 [INFO] training head...
